@@ -1,0 +1,288 @@
+body {
+    box-sizing: border-box;
+    padding: 0;
+    font-family: sans-serif;
+
+    background-image: url("/img/beytepe.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+
+.fixed-width {
+    width: 940px;
+    margin: auto;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+
+}
+
+.clearfix:after {
+    clear: both;
+
+}
+
+/*============================
+            Header
+============================== */
+nav {
+    position: relative;
+    margin: auto;
+    background: #56205e;
+    height: 66px;
+    width: 100%;
+}
+
+label.logo {
+    float: left;
+    color: white;
+    font-size: 20px;
+    padding: 0 100px;
+    font-weight: bold;
+}
+
+#icon {
+    color: white;
+    font-size: 25px;
+    line-height: 66px;
+    padding: 0 7px;
+    font-weight: bold;
+}
+
+.signin-button {
+    float: right;
+    margin-top: 25px;
+    margin-right: 100px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/*============================
+           Main Visual
+============================== */
+
+.title {
+    text-align: center;
+    margin: 70px auto 30px auto;
+}
+
+.title > h1 {
+    color: #7e20a1;
+    font-size: 2em;
+}
+
+.title > h2 {
+    color: #888888;
+}
+
+.title > h3 {
+    color: #757575;
+    font-weight: 100;
+}
+
+.center {
+    display: block;
+    position: absolute;
+    top: 53%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.form-box {
+    display: block;
+    margin: auto;
+    width: 350px;
+    background: white;
+    border-radius: 10px;
+}
+
+.form-login {
+    border-top-left-radius: 0;
+}
+
+.form-box form {
+    padding: 1px 2.4rem;
+    box-sizing: border-box;
+}
+
+.button-group {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+#user_button {
+    border-top-left-radius: 5px;
+}
+
+#admin_button {
+    border-top-right-radius: 5px;
+}
+
+.button {
+    float: left;
+    border: none;
+    color: white;
+    padding: 12px 32px;
+    background: #555555;
+    opacity: 80%;
+    font-size: 15px;
+    transition: 0.3s;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.button:hover, .button:focus {
+    background-color: #5b1266
+}
+
+form .text {
+    position: relative;
+    margin: 1.2rem 0;
+}
+
+form .text:first-child {
+    margin-top: 1.8rem;
+}
+
+
+.text input {
+    margin-top: 3px;
+    width: 95%;
+    padding: 0 4px;
+    height: 26px;
+    font-size: 14px;
+
+}
+
+.terms-conditions {
+    display: flex;
+    align-items: center;
+}
+
+.terms-conditions p {
+    font-size: 0.9rem;
+}
+
+#terms-link {
+    color: #a421c2;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    margin: 1rem 0 0.8rem 0;
+    font-size: 0.8rem;
+    color: #242424;
+}
+
+.remember-me input {
+    margin-left: 0.2rem;
+}
+
+#forgot-password {
+    font-size: smaller;
+    color: #a421c2;
+}
+
+.submit {
+    width: 100%;
+    height: 35px;
+    background: #7e20a1;
+    border-radius: 7px;
+    font-size: 14px;
+    color: #e9f4fb;
+    font-weight: 600;
+    cursor: pointer;
+    outline: none;
+    margin: 0.8rem 0 1.5rem 0;
+}
+
+.submit:hover, .submit:focus {
+    background-color: #66126e;
+}
+
+/*===========================
+    Inform Box-Verification
+=========================== */
+
+.main-box {
+    background-color: white;
+    justify-items: center;
+    margin:4rem auto;
+    width: 25rem;
+    display: grid;
+    justify-content: center;
+    padding: 2rem;
+    border-radius: 10px;
+}
+.verified{
+    padding: 1.5rem 0;
+    margin-top: 6rem;
+}
+.main-box h3{
+    color: #440154;
+    font-size: 1.5rem;
+}
+
+.main-box #verified{
+    color: #4f0b5e;
+}
+.main-box img {
+    width: 13rem;
+    height: 13rem;
+}
+.main-box p{
+    text-align: center;
+    color: #2f2f2f;
+    font-size: 0.95rem;
+}
+.main-box #verified-message{
+    margin-top: 1rem;
+}
+.main-box button{
+    border-radius: 20px;
+    background-color: #5b1266;
+}
+.main-box button:hover {
+    background-color: #470850;
+    font-size: 1rem;
+}
+
+/*============================
+            Footer
+==============================*/
+
+.page-footer {
+    position: fixed;
+    width: 100%;
+    background-color: #56205e;
+    bottom: 0;
+    color: white;
+    font-size: 1.1rem;
+    height: 80px;
+
+}
+
+.page-footer .copyright {
+    float: left;
+}
+
+.page-footer .credits {
+    float: right;
+}
+
+.page-footer-content {
+    padding: 32px;
+    font-size: 16px;
+}
+

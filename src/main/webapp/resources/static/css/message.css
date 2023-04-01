@@ -1,0 +1,547 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: sans-serif;
+    overflow-x: hidden;
+    background-color: #efe9f0;
+}
+
+/*============================
+            Header
+============================== */
+nav {
+    width: 100%;
+    background: #56205e;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    padding: 0.7rem 0;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    align-items: center;
+    width: 15vw;
+    padding-right: 2rem;
+    margin-left: 2.7rem;
+}
+
+.logo label {
+    color: white;
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+}
+
+.logo #icon {
+    margin-right: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.search-form {
+    background-color: #e3e3e3;
+    border-radius: 2rem;
+    padding: 0.6rem 0.1rem;
+    display: flex;
+}
+
+.search-form #search-bar {
+    background-color: transparent;
+    width: 15vw;
+    margin-left: 1rem;
+    color: #242424;
+    border: none;
+}
+
+.search-form #search-button {
+    background-color: transparent;
+    border: none;
+    padding: 0 1rem;
+    cursor: pointer;
+}
+
+#search-bar::placeholder {
+    color: #757575;
+    font-size: 0.95rem;
+}
+
+ul {
+    list-style-type: none;
+
+}
+
+.items a {
+    color: white;
+    text-decoration: none;
+    margin-right: 5rem;
+    padding: 1rem;
+    display: flex;
+    font-weight: bold;
+}
+
+.items i {
+    padding: 0 1rem;
+    overflow: hidden;
+
+
+}
+
+/*============================
+            Main
+============================== */
+
+.container {
+    position: static;
+    margin: 5.7rem 10rem; /* navbar height=3.5+1.5rem */
+    display: grid;
+    grid-template-columns: 65vw 17vw;
+    column-gap: 3rem;
+}
+
+.profile-photo img {
+    overflow: hidden;
+    border-radius: 50%;
+    width: 3rem;
+}
+
+/*===================
+   Message Container
+===================== */
+.message-container {
+    position: static;
+    height: 82vh;
+    width: 100%;
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns:38% 60%;
+    border-radius: 10px;
+
+}
+
+.message-container .message-box {
+    background-color: whitesmoke;
+    display: block;
+    border-radius: 10px 0 0 10px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+
+.message-box .item {
+    display: flex;
+    align-items: center;
+    height: 5.3rem;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 0.9rem;
+    border-bottom-style: solid;
+    border-width: 2.5px;
+    border-color: #efe9f0;
+    padding: 1rem;
+}
+
+.message-box .item:first-child {
+    font-size: 1rem;
+    padding: 0 1.5rem;
+    justify-content: space-between;
+    border-bottom: solid 1.2px #b4b4b4;
+
+}
+
+.item .chat-summary {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 20% 70%;
+}
+
+.message-box .active-chat {
+    background-color: rgba(154, 34, 154, 0.23);
+}
+
+
+.item .profile-photo img {
+    width: 3.5rem;
+    margin-right: 1rem;
+
+}
+
+.chat-summary h3 {
+    font-size: medium;
+    margin-bottom: 0.3rem;
+    color: #242424;
+    display: flex;
+    align-items: center;
+}
+
+.chat-summary h3 small{
+    font-size:0.7rem ;
+    border-radius: 50%;
+    background-color: rgb(132, 10, 180);
+    color: #e3e3e3;
+    padding: 0.1rem 0.3rem;
+    margin-left: 0.4rem;
+    margin-top: -0.14rem;
+}
+
+.chat-summary p {
+    color: #555555;
+}
+
+/*==================
+    Message Tab
+===================*/
+.default-message-tab {
+    display: flex;
+    align-items: center;
+    background-color: whitesmoke;
+    border-radius: 0 10px 10px 0;
+}
+
+.default-message-tab .message-tab-content {
+    display: block;
+    text-align: center;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.message-tab-content .align {
+    margin: 1.2rem 0;
+}
+
+.message-tab-content h2 {
+    color: #242424;
+}
+
+.message-tab-content p {
+    font-size: 1rem;
+    color: #555555;
+    padding-bottom: 0.6rem;
+}
+
+
+.message-tab-content a {
+    background-color: #940794;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    color: white;
+    font-size: 0.9rem;
+    font-weight: bold;
+    cursor: pointer;
+
+}
+
+.message-tab-content a:hover {
+    background-color: #800c91;
+    font-size: 0.95rem;
+
+}
+
+/*===================
+       Chat room
+===================== */
+
+.chat-room {
+    background-color: whitesmoke;
+    border-top-right-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+}
+
+/*---------Chat Header--------*/
+.chat-room .chat-header {
+    display: flex;
+    border-top-right-radius: 10px;
+    align-items: flex-start;
+    justify-content: space-between;
+    border-bottom: solid 1.2px #b4b4b4;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+.user-info .profile-photo img {
+    margin: 0.7rem;
+    width: 3.5rem;
+}
+
+.user-info a {
+    color: #242424;
+}
+
+.chat-header .chat-options {
+    margin: 1rem;
+    color: #555555;
+
+}
+
+/*---------Chat--------*/
+.chat {
+    padding-bottom: 1rem;
+    overflow-y: auto;
+    height: 100%;
+}
+
+.chat .time {
+    color: #777;
+    diplay: block;
+    font-size: 0.7rem;
+
+}
+
+/*-----Recieved-----*/
+.chat .received-inbox {
+}
+
+.received-inbox {
+    display: flex;
+    align-items: flex-start;
+    padding: 1rem 0 1rem 1rem;
+    vertical-align: top;
+    max-width: 20rem;
+
+}
+
+.received-inbox .profile-photo img {
+    width: 1.4rem;
+    float: left;
+    margin-right: 0.8rem;
+}
+
+
+.received-inbox .received-message p {
+    background: rgba(210, 210, 210, 0.77) none repeat scroll 0 0;
+    border-radius: 10px;
+    color: #646464;
+    font-size: 0.92rem;
+    margin: 0;
+    padding: 0.3rem 0.5rem 0.3rem 0.8rem;
+}
+
+/*-----Sent-----*/
+
+.sent-inbox {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    padding: 0.3rem 0 1rem 1rem;
+    vertical-align: top;
+}
+
+.sent-inbox .profile-photo img {
+    width: 1.4rem;
+    float: right;
+    margin-right: 1rem;
+
+}
+
+.sent-inbox .sent-message {
+    display: block;
+    max-width: 18rem;
+    margin-left: auto;
+    margin-right: 0.8rem;
+
+
+}
+
+.sent-message p {
+    background: #a936da none repeat scroll 0 0;
+    border-radius: 10px;
+    color: #efefef;
+    font-size: 0.92rem;
+    padding: 0.3rem 0.5rem 0.3rem 0.8rem;
+
+}
+
+/*====Chat Form=====*/
+.chat-room .chat-bottom {
+    border-top: solid thin #e3e3e3;
+}
+
+.chat-bottom .chat-form {
+    display: flex;
+    align-items: center;
+    margin: 0.3rem 2rem;
+    padding: 0.3rem 0 0.3rem 0;
+}
+
+textarea {
+    width: 100%;
+    max-height: 200%;
+    padding: 0.6rem;
+    font-size: 0.8rem;
+    font-family: sans-serif;
+    border-radius: 30px;
+    border: solid thin #888888;
+    overflow-y: auto;
+    resize: none;
+    background-color: rgba(245, 245, 245, 0.8);
+}
+
+textarea::placeholder {
+    text-align: left;
+    padding: 0.45rem;
+    padding-left: 1rem;
+}
+
+.chat-form button {
+    margin-left: -2.2rem;
+    font-size: 1.1rem;
+    background-color: transparent;
+    color: #542d5e;
+    border: none;
+    cursor: pointer;
+}
+
+.chat-form button:hover {
+    font-size: 1.15rem;
+    color: #781c88;
+}
+
+
+/*===================
+       Right Side
+===================== */
+.right {
+    height: max-content;
+    position: sticky;
+    top: 5.4rem;
+}
+
+
+/*--------Side Bar--------*/
+.side-bar {
+    background-color: white;
+    margin-top: 1rem;
+    border-radius: 10px;
+    width: 90%;
+}
+
+.side-bar-item {
+    display: flex;
+    align-items: center;
+    height: 3.5rem;
+    cursor: pointer;
+    transition: all 0.5s ease; /*transition on hover*/
+    position: relative;
+    text-decoration: none;
+    font-size: 0.9rem;
+    border-bottom-style: solid;
+    border-width: thin;
+    border-color: #efe9f0;
+}
+
+.side-bar-item .profile-photo img {
+    margin-left: -0.3rem;
+    margin-right: -0.4rem;
+    width: 2.1rem;
+}
+
+.side-bar-item:first-child {
+    border-radius: 10px 10px 0 0;
+
+}
+
+.side-bar-item:last-child {
+    border-radius: 0 0 10px 10px;
+}
+
+.side-bar-item:hover {
+    background-color: rgba(121, 51, 141, 0.56);
+}
+
+.side-bar-item:hover span {
+    color: #542d5e;
+    font-size: 0.95rem;
+}
+
+.side-bar-item:hover img {
+    padding-left: -0.4rem;
+    width: 2.4rem;
+    border: solid 2px #542d5e;
+}
+
+.side-bar span { /*spans of the items*/
+    margin-left: 1rem;
+    display: flex;
+    position: relative;
+    align-items: center;
+    color: #808080;
+}
+
+.side-bar h3 {
+    margin-left: 0.7rem;
+    font-weight: normal;
+
+}
+
+.side-bar i {
+    font-size: 1.2rem;
+    margin-left: 0.8rem;
+    margin-right: 0.8rem;
+}
+
+.right .side-bar .active {
+    background-color: rgba(79, 11, 94, 0.58); /*HOVER BACKGROUND COLOR DEGISTIR*/
+}
+
+.right .side-bar .active::before {
+    content: "";
+    display: block;
+    width: 0.5rem;
+    height: 100%;
+    position: absolute;
+    background-color: #542d5e;
+}
+
+.right .side-bar .side-bar-item:last-child.active {
+    border-bottom-left-radius: 10px;
+    overflow: hidden;
+}
+
+.right .side-bar .side-bar-item:first-child.active {
+    border-top-left-radius: 10px;
+    overflow: hidden;
+}
+
+.right .side-bar .active i,
+.right .side-bar .active h3 {
+    color: antiquewhite;
+}
+
+/*============================
+            Footer
+==============================*/
+.page-footer {
+    position: relative;
+    width: 100%;
+    background-color: #56205e;
+    bottom: 0;
+    color: white;
+    font-size: 1.1rem;
+
+}
+
+.page-footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 2rem;
+    font-size: 1rem;
+}
+
+

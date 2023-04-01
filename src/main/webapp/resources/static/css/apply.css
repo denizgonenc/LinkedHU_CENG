@@ -1,0 +1,224 @@
+* {
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+.clearfix:before,
+ .clearfix:after {
+   content: " ";
+   display: table;
+
+ }
+.clearfix:after{
+  clear: both;
+
+}
+
+.wrapper {
+  margin-left:auto;
+  margin-right:auto;
+  width:940px;
+}
+
+/*=========================
+            Header
+==========================*/
+nav{
+  position: relative;
+  margin: auto;
+  background:#56205e;
+  height: 80px;
+  width: 100%;
+}
+
+label.logo{
+  float: left;
+  color: white;
+  font-size: 20px;
+  padding: 0 100px;
+  font-weight: bold;
+}
+#icon{
+  color: white;
+  font-size: 25px;
+  line-height: 80px;
+  padding: 0 7px;
+  font-weight: bold;
+}
+.search-form{
+  width: 100%;
+  float: left;
+  width: 50%;
+  margin-top: 20px;
+  font-size: medium;
+  margin-left: 200px;
+}
+#search-bar {
+  font-size: medium;
+  height: 40px;
+  padding: 15px;
+  width: 300px;
+  border: none;
+  border-radius: 20px;
+}
+
+.search-button {
+  position: relative;
+  left: -40px;
+  font-size: medium;
+  background: transparent;
+  color: #888888;
+  border: none;
+  margin: auto;
+}
+
+.button{
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.button-group{
+  float: right;
+  margin-top: -30px;
+  width: 300px;
+}
+
+
+
+
+/*=========================
+            Body
+==========================*/
+.container{
+  background-color: rgb(230, 198, 238, 10%);
+  margin: 0 auto 0px auto;
+  width: 800px;
+
+}
+
+.main{
+  background-color: #efefef;
+  width: 700px;
+  margin: 0 auto 0px auto;
+
+}
+.title{
+  border-style:hidden;
+  border-bottom: 1px solid #a6a6a6;
+  text-align: center;
+  padding: 20px;
+  font-family: sans-serif;
+  color: #242424;
+
+}
+.title>h1{
+  margin-top: 10px;
+  font-weight: bolder;
+  font-size: x-large;
+}
+.title>p{
+  font-size: large;
+  padding: 20px;
+}
+
+.apply{
+  margin:auto;
+  width: 600px;
+  font-size: 18px;
+  border-radius: 0 0 10px 10px;
+  color: #242424;
+}
+.apply>h3{
+
+  font-size: larger;
+}
+
+form#apply{
+  position: relative;
+  margin: 20px 150px 20px 150px;
+}
+.label{
+  margin: auto;
+  font-family: sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+input.name{
+  width:300px;
+  font-size: 16px;
+  border: 0.5px solid #bdbdbd;
+  border-radius: 10px;
+  padding: 10px 10px 10px 15px;
+  background: #e3e3e3;
+  margin: auto auto auto auto;
+
+}
+
+/*=========================
+        Upload Area
+========================== */
+
+.upload{
+  width: 300px;
+  background: #e3e3e3;
+  border: 0.5px solid #bdbdbd;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 7px 7px 12px rgba(0,0,0,0.05);
+}
+
+.form{
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 5px;
+  border: 1.7px dashed #6e6e6e;
+}
+
+.form>label{
+  font-size: 18px;
+  color: #6e6e6e;
+  padding-right: 10px;
+  cursor: pointer;
+}
+
+.form>label>i {
+  padding-right: 10px;
+}
+.form>input {
+  display: none;
+}
+
+
+#submit{
+  position: relative;
+  width: 300px;
+  height: 40px;
+  padding: 7px;
+  background-color:#6f317d;
+  color: whitesmoke;
+  font-size: 16px;
+  font-family: sans-serif;
+  font-weight: 600;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-bottom:20px;
+}
+
+#submit:hover{
+background-color: #542d5e;
+}
+
+
+
+
+

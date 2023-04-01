@@ -1,0 +1,635 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+body {
+    font-family: sans-serif;
+    overflow-x: hidden;
+    background-color: #efe9f0;
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-photo img {
+    width: 2.5rem;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+
+/*============================
+            Header
+============================== */
+nav {
+    width: 100%;
+    background: #56205e;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    padding: 0.7rem 0;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    align-items: center;
+    width: 15vw;
+    padding-right: 2rem;
+    margin-left: 2.7rem;
+}
+
+.logo label {
+    color: white;
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+}
+
+.logo #icon {
+    margin-right: 0.5rem;
+    font-size: 1.2rem;
+}
+
+
+.search-form {
+    background-color: #e3e3e3;
+    border-radius: 2rem;
+    padding: 0.6rem 0.1rem;
+    display: flex;
+}
+
+.search-form #search-bar {
+    background-color: transparent;
+    width: 15vw;
+    margin-left: 1rem;
+    color: #242424;
+    border: none;
+}
+
+.search-form #search-button {
+    background-color: transparent;
+    border: none;
+    padding: 0 1rem;
+    cursor: pointer;
+}
+
+#search-bar::placeholder {
+    color: #757575;
+    font-size: 0.95rem;
+}
+
+.items {
+    display: flex;
+    align-items: center;
+}
+
+.items a {
+    color: white;
+    text-decoration: none;
+    padding: 1rem;
+    display: flex;
+    font-weight: bold;
+}
+
+.items i {
+    padding: 0 0.5rem;
+    overflow: hidden;
+
+}
+
+/*============================
+            Main
+============================== */
+
+main {
+    display: flex;
+    gap: 2rem;
+    padding: 6rem 5rem;
+    margin-left: 5vw;
+    min-height: 89.5vh;
+
+}
+
+/*===================
+       Left Side
+===================== */
+.left {
+    height: max-content;
+    position: sticky;
+    top: 5.4rem;
+}
+
+/*--------Side Bar--------*/
+.left-side-bar {
+    background-color: white;
+    border-radius: 10px;
+    width: 15rem;
+
+}
+
+.side-bar-item {
+    display: flex;
+    align-items: center;
+    height: 4rem;
+    cursor: pointer;
+    transition: all 0.5s ease; /*transition on hover*/
+    position: relative;
+    text-decoration: none;
+    font-size: 0.9rem;
+    border-bottom-style: solid;
+    border-width: thin;
+    border-color: #efe9f0;
+
+}
+
+.side-bar-item:first-child {
+    border-radius: 10px 10px 0 0;
+
+}
+
+.side-bar-item:last-child {
+    border-radius: 0 0 10px 10px;
+}
+
+
+.left-side-bar a { /*spans of the items*/
+    display: flex;
+    position: relative;
+    align-items: center;
+    color: #808080;
+}
+
+.left-side-bar h3 {
+    padding-left: 1.5rem;
+    font-weight: normal;
+
+}
+
+.side-bar-item:hover {
+    background-color: rgba(121, 51, 141, 0.56);
+    color: rgba(248, 243, 253);
+}
+
+.side-bar-item:hover span {
+    color: #542d5e;
+    font-size: 0.92rem;
+}
+
+.left .left-side-bar .active {
+    background-color: rgba(79, 11, 94, 0.58); /*HOVER BACKGROUND COLOR DEGISTIR*/
+}
+
+.left .left-side-bar .active::before {
+    content: "";
+    display: block;
+    width: 0.5rem;
+    height: 100%;
+    position: absolute;
+    background-color: #542d5e;
+}
+
+.left .left-side-bar .side-bar-item:last-child.active {
+    border-bottom-left-radius: 10px;
+    overflow: hidden;
+}
+
+.left .left-side-bar .side-bar-item:first-child.active {
+    border-top-left-radius: 10px;
+    overflow: hidden;
+}
+
+.left .left-side-bar .active i,
+.left .left-side-bar .active h3 {
+    color: rgba(248, 243, 253, 0.77);
+    font-weight: bold;
+}
+
+/*=====================
+           Right
+ =====================*/
+.right {
+    height: max-content;
+    position: sticky;
+    top: 5.4rem;
+
+
+}
+
+.settings-menu {
+    width: 45rem;
+
+}
+
+.settings-container {
+    background-color: white;
+    border-radius: 10px 10px 0 0;
+    padding: 1rem 1.5rem 2rem 1.5rem;
+}
+
+.settings-container .menu-header {
+    border-bottom: solid thin #e3e3e3;
+    padding: 1.5rem 1rem 1rem 1rem;
+
+}
+
+.settings-container .menu-header h3 {
+    font-size: 1.6rem;
+    font-weight: normal;
+}
+
+.settings-container .menu-header p {
+    margin-top: 0.4rem;
+    font-size: 0.95rem;
+    font-weight: lighter;
+    color: #888888;
+}
+
+.settings-container .sub-header h3 {
+    font-size: 1.2rem;
+}
+
+.settings-container label {
+    font-size: 0.95rem;
+    color: #464545;
+}
+
+.settings-container .change-info {
+    padding: 1.2rem 1rem;
+    border-bottom: solid thin #e3e3e3;
+}
+
+.change-info input {
+    margin-top: 0.5rem;
+    margin-right: -0.5rem;
+    width: 90%;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.1rem;
+    border: solid thin #525252;
+}
+
+.change-info label, .change-info input {
+    margin-left: 2rem;
+}
+
+.change-info:last-child {
+    border-bottom: none;
+    padding-bottom: 0rem;
+}
+
+.sub-section {
+    padding: 1rem;
+}
+
+.sub-section input {
+    margin-top: 0.5rem;
+    margin-left: 2rem;
+    width: 50%;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.1rem;
+    border: solid thin #525252;
+}
+
+#linkedin-link, #linkedin-mail {
+    width: 90%;
+}
+
+.sub-section label {
+    font-size: 0.95rem;
+    margin-left: 2rem;
+}
+
+.last-sub-child {
+    padding-bottom: 1.5rem;
+    border-bottom: solid thin #e3e3e3;
+}
+
+.sub-section:last-child {
+    margin-bottom: -0.5rem;
+}
+
+.settings-footer {
+    padding: 1.5rem 2.5rem;
+    border-radius: 0 0 10px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: white;
+    border-top: solid thin #e3e3e3;
+}
+
+.settings-footer #save {
+    background-color: #7c15b0;
+    padding: 0.5rem 2rem;
+    border-radius: 3rem;
+    border: solid #763380;
+    font-size: 0.9rem;
+    color: #e3e3e3;
+    cursor: pointer;
+    float: right;
+}
+
+.settings-footer #save:hover {
+    background-color: #651d81;
+
+}
+
+/*============================
+        Edit Profile
+=============================*/
+/*=========PHOTOS==========*/
+#edit-photos {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 3rem
+}
+
+.upload-photo input {
+    width: 100%;
+    border: none;
+    padding-left: 0;
+}
+
+.upload-photo .sub-section {
+    padding: 0.8rem 1rem;
+
+}
+
+.display {
+    border-radius: 0.5rem 0.5rem 0 0;
+    border: solid thin #dadada;
+    background-color: #f6f6f6;
+}
+
+#edit-photos .profile-photo {
+    margin-top: -1rem;
+    margin-left: 7%;
+}
+
+#edit-photos .profile-photo img {
+    width: 3.5rem;
+    border: solid white;
+}
+
+
+.cover {
+    display: flex;
+    align-items: center;
+}
+
+.cover-photo {
+    width: 18rem;
+    height: 6rem;
+    border-radius: 0.2rem;
+}
+
+.cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+/*=========OTHER INFO==========*/
+
+
+.sub-section textarea {
+    margin-top: 0.5rem;
+    margin-left: 2rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 0.1rem;
+    border: solid thin #525252;
+    width: 90%;
+    height: 3rem;
+    font-family: sans-serif;
+    overflow-y: auto;
+    resize: none;
+}
+
+/*==========EXPERIENCE========*/
+.experience {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.experience #add-experience-button {
+    cursor: pointer;
+}
+
+#add-experience-button:hover {
+    color: #971fa6;
+}
+
+.media-type .custom-file-upload:hover {
+    color: #542d5e;
+}
+
+.custom-file-upload {
+    color: #6e6e6e;
+    border: none;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+
+.sub-section label i {
+    font-size: 1.2rem;
+}
+
+/*=======Add Experience======*/
+#add-experience {
+    display: none;
+    border-bottom: solid thin #e3e3e3;
+    padding-bottom: 1rem;
+}
+
+#add-experience p {
+    margin: 1rem 0 0 3rem;
+    font-size: 0.95rem;
+    color: #464545;
+}
+
+.company {
+    display: flex;
+    align-items: center;
+}
+
+.company img, .content img {
+    width: 4rem;
+    border: solid #e3e3e3;
+    margin-left: 1.8rem;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.company input {
+    width: 100%;
+    border: none;
+    padding-left: 0;
+}
+
+.company .sub-section label {
+    width: 100%;
+}
+
+.add-experience .sub-section {
+    padding: 0.8rem 1rem;
+}
+
+.time-section {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 40% 40%;
+    gap: 2rem;
+}
+
+#end-date-label {
+    margin-left: 3rem;
+}
+
+#start-date {
+    width: 90%;
+    margin-right: 0;
+}
+
+#end-date {
+    width: 90%;
+    margin-left: 3rem;
+}
+
+
+/*===========================
+       Current Experiences
+============================*/
+
+.content {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    padding: 1rem 0 0 1rem;
+}
+
+
+.content:last-child {
+    border-bottom: none;
+}
+
+.content-info {
+    margin-left: 2rem;
+}
+
+.content-info h4 {
+    padding: 0.2rem;
+}
+
+.content-info p {
+    font-size: 0.9rem;
+    padding: 0.2rem;
+}
+
+.content-info .time {
+    font-size: 0.8rem;
+    font-weight: lighter;
+    color: #555555;
+}
+
+.experience-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 1.5rem;
+    border-bottom: solid thin #e3e3e3;
+}
+
+.experience-content:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.experience-content .edit-button {
+    margin-top: -1rem;
+    margin-right: 3rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.experience-content .edit-button:hover {
+    color: #971fa6;
+}
+
+/*=======BlOCKES ACCOUNTS==========*/
+.accounts .profile-content {
+    border-bottom: solid thin #e3e3e3;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.accounts .profile-content {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-top: 1rem;
+
+}
+
+.profile-content .edit-button {
+    font-size: 0.95rem;
+    cursor: pointer;
+    margin-right: 2rem;
+}
+
+.edit-button:hover {
+    color: #a100b0;
+}
+
+.profile-content .profile {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.profile-content .profile p,
+.profile-content .profile img {
+    cursor: pointer;
+}
+
+.profile-content .profile p:hover {
+    color: #65086e;
+
+}
+
+.accounts img {
+    width: 4rem;
+    border: solid #e3e3e3;
+    margin-left: 1.8rem;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+/*============================
+            Footer
+==============================*/
+.page-footer {
+    width: 100%;
+    background-color: #56205e;
+    color: white;
+    font-size: 1.1rem;
+
+}
+
+.page-footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 2rem;
+    font-size: 1rem;
+}
+

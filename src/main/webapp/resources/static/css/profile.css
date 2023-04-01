@@ -1,0 +1,560 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+body {
+    font-family: sans-serif;
+    overflow-x: hidden;
+    background-color: #efe9f0;
+}
+
+/*============================
+            Header
+============================== */
+nav {
+    width: 100%;
+    background: #56205e;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    padding: 0.7rem 0;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    align-items: center;
+    width: 15vw;
+    padding-right: 2rem;
+    margin-left: 2.7rem;
+}
+
+.logo label {
+    color: white;
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+}
+
+.logo #icon {
+    margin-right: 0.5rem;
+    font-size: 1.2rem;
+}
+
+
+.search-form {
+    background-color: #e3e3e3;
+    border-radius: 2rem;
+    padding: 0.6rem 0.1rem;
+    display: flex;
+}
+
+.search-form #search-bar {
+    background-color: transparent;
+    width: 15vw;
+    margin-left: 1rem;
+    color: #242424;
+    border: none;
+}
+
+.search-form #search-button {
+    background-color: transparent;
+    border: none;
+    padding: 0 1rem;
+    cursor: pointer;
+}
+
+#search-bar::placeholder {
+    color: #757575;
+    font-size: 0.95rem;
+}
+
+ul {
+    list-style-type: none;
+
+}
+
+.items a {
+    color: white;
+    text-decoration: none;
+    margin-right: 5rem;
+    padding: 1rem;
+    display: flex;
+    font-weight: bold;
+}
+
+.items i {
+    padding: 0 1rem;
+    overflow: hidden;
+
+
+}
+
+/*============================
+            Main
+============================== */
+
+.container {
+    position: relative;
+    margin: 5.7rem 10rem; /* navbar height=3.5+1.5rem */
+    display: grid;
+    grid-template-columns: 60vw 18vw;
+    column-gap: 4rem;
+}
+
+/*===================
+        PROFILE CONTAINER
+===================== */
+.profile-container {
+
+
+}
+
+
+/*================
+   Profile Header
+==================*/
+.profile-header {
+
+}
+
+
+.profile-header .cover {
+    width: 100%;
+    height: 15rem;
+    border-radius: 0.2rem;
+}
+
+.profile-header .cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.profile-header .details{
+    display: grid;
+    grid-template-columns: 95% 5%;
+    background-color: whitesmoke;
+    padding-bottom: 1rem;
+    border-radius: 0.2rem;
+}
+.profile-header .left-details {
+    display: grid;
+    grid-template-columns: 28% 70%;
+    background-color: whitesmoke;
+    padding-bottom: 1rem;
+    border-radius: 0.2rem;
+}
+
+.left-details .profile-photo img {
+    width: 11rem;
+    overflow: hidden;
+    border-radius: 50%;
+    border: solid white 0.4rem;
+    margin: -3.2rem 2rem 1rem 3rem;
+}
+
+.details a{
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    color: #313131;
+    cursor: pointer;
+}
+.details a:hover{
+    margin-top: 1rem;
+    color: #71028c;
+}
+
+.left-details .info-buttons {
+    width: 80%;
+    height: 100%;
+    display: grid;
+}
+
+.info-buttons .info {
+    padding-top: 1rem;
+}
+
+.info-buttons .info h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.2rem;
+}
+
+.info-buttons .info p {
+    color: #555555;
+    margin-bottom: 0.2rem;
+
+}
+
+.info-buttons .info a {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #5b1266;
+}
+
+.info-buttons .buttons {
+    display: flex;
+    align-items: center;
+    padding-bottom: 1rem;
+
+}
+
+.info-buttons .buttons a {
+    background-color: #940794;
+    margin: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor:pointer;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.buttons a:hover{
+    background-color: #800c91;
+    font-size: 0.85rem;
+
+}
+
+.info-buttons .buttons i {
+    font-size: 1rem;
+    padding-right: 0.3rem;
+}
+
+/*===================
+    About Section
+===================== */
+.profile-container .profile-feed {
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: #f4f0f5;
+    border-radius:0.2rem ;
+}
+
+.feed-box { /*Common template for all the boxes in the feed section*/
+    padding: 2rem;
+    margin: 1rem 0 1rem 0;
+    background-color: whitesmoke;
+    border-radius: 0.5rem;
+
+}
+
+.profile-feed .photo {
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: 50%;
+    width: 4.5rem;
+    height: 4.5rem;
+}
+
+.profile-feed .about {
+    padding: 2rem;
+    margin: 1rem 0 1rem 0;
+    background-color: whitesmoke;
+    border-radius: 0.5rem;
+}
+
+.about p {
+    padding-top: 0.6rem;
+    font-size: 0.95rem;
+}
+
+.profile-feed .skills-content {
+    display: grid;
+    align-items: center;
+    grid-template-columns:30% 30% 30%;
+}
+
+.skills-content span {
+    padding: 1rem 0 0.8rem 0;
+}
+
+
+.content {
+    display: flex;
+    align-items: center;
+    margin: 1rem 0 1rem 0;
+    padding: 1rem 0 1rem 0;
+    border-bottom: solid 1.8px #e3e3e3;
+}
+
+.content:last-child {
+    border-bottom: none;
+}
+
+
+.content-info {
+    margin-left: 2rem;
+
+
+
+}
+.content-info h4 {
+    padding: 0.2rem;
+
+
+}
+.content-info p {
+    font-size: 0.9rem;
+    padding: 0.2rem;
+
+}
+
+.content-info .time {
+    font-size: 0.8rem;
+    font-weight: lighter;
+    color: #555555;
+}
+
+/*==================
+       POP UP
+=================== */
+.user-options-pop-up{
+    display: none;
+    position: absolute;
+    top:13.5% ;
+    left: 57%;
+    background-color: rgba(239, 239, 239);
+    width:12vw;
+    border-radius: 5px;
+    z-index: 2;
+    align-items: center;
+    border:solid thin #e3e3e3;
+}
+
+.user-options-pop-up .pop-up-item{
+    border-bottom:solid thin #e3e3e3;
+    cursor: pointer;
+    padding:0.5rem ;
+}
+.pop-up-item:last-child{
+    border-bottom: none;
+}
+.pop-up-item span{
+    padding:0.2rem 0.3rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.95rem;
+    color: #555555;
+}
+.pop-up-item:hover{
+    background-color: rgba(115, 27, 140, 0.62);
+}
+.pop-up-item:hover span{
+    font-size: 1rem;
+    color: #ffffff;
+}
+
+
+.pop-up-item:hover:first-child{
+    border-radius: 5px 5px 0 0;
+}
+.pop-up-item:hover:last-child{
+    border-radius: 0 0 5px 5px ;
+}
+
+
+
+
+/*===================
+       Left Side
+===================== */
+.right {
+    height: max-content;
+    position: sticky;
+    top: 5.7rem;
+}
+
+
+/*--------Side Bar--------*/
+.side-bar {
+    background-color: white;
+    border-radius: 10px;
+
+}
+
+.side-bar-item {
+    display: flex;
+    align-items: center;
+    height: 3.6rem;
+    cursor: pointer;
+    transition: all 0.5s ease; /*transition on hover*/
+    position: relative;
+    text-decoration: none;
+    font-size: 0.9rem;
+    border-bottom-style: solid;
+    border-width: thin;
+    border-color: #efe9f0;
+
+}
+
+.side-bar-item .profile-photo img {
+    overflow: hidden;
+    border-radius: 50%;
+    margin-left: -0.3rem;
+    margin-right: -0.4rem;
+    width: 2.1rem;
+}
+
+.side-bar-item:first-child {
+    border-radius: 10px 10px 0 0;
+
+}
+
+.side-bar-item:last-child {
+    border-radius: 0 0 10px 10px;
+}
+
+.side-bar-item:hover {
+    background-color: rgba(121, 51, 141, 0.56);
+}
+.side-bar-item:hover span{
+    color:#542d5e;
+    font-size: 0.95rem;
+}
+.side-bar-item:hover img{
+    padding-left:-0.4rem ;
+    width: 2.4rem;
+    border: solid 2px #542d5e;
+}
+.side-bar span { /*spans of the items*/
+    margin-left: 1rem;
+    display: flex;
+    position: relative;
+    align-items: center;
+    color: #808080;
+}
+
+.side-bar h3 {
+    margin-left: 0.7rem;
+    font-weight: normal;
+
+}
+
+.side-bar i {
+    font-size: 1.2rem;
+    margin-left: 0.8rem;
+    margin-right: 0.8rem;
+}
+
+.side-bar i .count{
+    background-color: #ff0000;
+    color: white;
+    font-size: 0.5rem;
+    padding:0.18rem 0.28rem;
+    border-radius: 50%;
+    position: absolute;
+    top: -0.4rem;
+    left: 1.4rem;
+}
+
+.right .side-bar .active {
+    background-color: rgba(79, 11, 94, 0.58); /*HOVER BACKGROUND COLOR DEGISTIR*/
+}
+
+.right .side-bar .active::before {
+    content: "";
+    display: block;
+    width: 0.5rem;
+    height: 100%;
+    position: absolute;
+    background-color: #542d5e;
+}
+
+.right .side-bar .side-bar-item:last-child.active {
+    border-bottom-left-radius: 10px;
+    overflow: hidden;
+}
+
+.right .side-bar .side-bar-item:first-child.active {
+    border-top-left-radius: 10px;
+    overflow: hidden;
+}
+
+.right .side-bar .active i,
+.right .side-bar .active h3 {
+    color: antiquewhite;
+}
+
+
+
+/* --------NOTIFICATION POPUP---------- */
+
+.notification-popup{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: -120%;
+    width: 20rem;
+    height: 25rem;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    border-top-left-radius: 0.1rem;
+    box-shadow: 0 0 1rem #818181;
+    z-index: 8;
+    overflow: auto;
+
+
+}
+.notification-popup::before{
+    content: "";
+    width: 1.2rem;
+    height: 1.2rem;
+    display: block;
+    background-color: whitesmoke;
+    position: absolute;
+    left: -0.6rem;
+    top: 0.25rem;
+    transform: rotate(45deg);
+}
+.notification-popup .profile-photo img {
+    width: 2.8rem;
+    margin-right:1rem;
+}
+.notification-popup > div{
+    display: flex;
+    align-items: center;
+    margin:1rem;
+    border-bottom: solid 1px #e3e3e3;
+}
+.notification-popup div{
+    margin-bottom: 0.5rem;
+}
+
+
+.notification-popup small{
+    display: block;
+}
+
+/*============================
+            Footer
+==============================*/
+
+.page-footer {
+    position: relative;
+    width: 100%;
+    background-color: #56205e;
+    bottom: 0;
+    color: white;
+    font-size: 1.1rem;
+
+}
+
+.page-footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 2rem;
+    font-size: 1rem;
+}

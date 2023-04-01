@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Edit Your Profile</title>
+  <link rel="stylesheet" href="../../resources/static/css/apply.css">
+  <script src="https://kit.fontawesome.com/6e9897a906.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+<!----Nav Bar starts---->
+<nav>
+  <!----Logo starts---->
+  <div class="logo">
+    <label> <i id="icon" class="fa-solid fa-globe"></i> LinkedHU_CENG</label>
+
+  </div>
+  <!----Logo ends---->
+
+  <!----Search form starts---->
+  <div class="search-form">
+    <input id="search-bar" type="search" placeholder="      Search..">
+    <button type="submit" id="search-button">
+      <i class="fa-solid fa-magnifying-glass"></i>
+    </button>
+  </div>
+  <!----Search form ends---->
+
+  <!----Items starts---->
+  <div class="items">
+    <a class="profile-photo" href="profile.html"><img src="../../resources/static/img/user-image.png"></a>
+    <a href="home.html">Home Page <i class="fa-solid fa-house-chimney"></i></a>
+    <a href="#">Log out <i class="fa-solid fa-arrow-right-from-bracket"></i></a>
+  </div>
+  <!----Items ends---->
+
+
+</nav>
+<!----Nav Bar ends---->
+
+<main>
+  <!----Left Side starts---->
+  <div class="left">
+
+    <!----Side Bar starts---->
+    <div class="left-side-bar">
+      <a class="side-bar-item" href="#">
+        <span><i class="profile-photo" href="#"><img src="../../resources/static/img/user-image.png"></i><h3>Profile</h3></span>
+      </a>
+      <a class="side-bar-item" href="home.html">
+        <span><i class="fa-solid fa-house-chimney"></i><h3>Home Page</h3></span>
+      </a>
+      <a class="side-bar-item" href="mail-inbox.html">
+        <span><i class="fa-solid fa-envelope"></i><h3>Mail Box</h3></span>
+      </a>
+      <a class="side-bar-item" href="favorites.html">
+        <span><i class="fa-solid fa-bookmark"></i><h3>Favorites</h3></span>
+      </a>
+      <a class="side-bar-item" href="settings.html">
+        <span><i class="fa-solid fa-gear"></i><h3>Settings</h3></span>
+      </a>
+    </div>
+    <!----Side Bar ends---->
+  </div>
+  <!----Left Side ends---->
+
+  <!----Right Side starts---->
+  <div class="right">
+    <div class="settings-menu">
+      <form class="settings-container">
+        <div class="menu-header">
+          <h3> RESEARCH ASSISTANT RECRUITMENT</h3>
+          <p>Please fill out the application form carefully.</p>
+        </div>
+        <div class="sub-section">
+          <label for="name">First name*:</label>
+          <br>
+          <input type="text" id="name">
+        </div>
+        <div class="sub-section last-sub-child">
+          <label for="surname">Last name*:</label>
+          <br>
+          <input type="text" id="surname">
+        </div>
+        <!---Location Info---->
+        <div class="menu-header">
+          <h3>Location</h3>
+        </div>
+        <div class="sub-section"><label for="country-region">Country/Region*:</label>
+          <br>
+          <input type="text" id="country-region">
+        </div>
+        <div class="sub-section last-sub-child"><label for="address">Address:</label>
+          <br>
+          <input type="text" id="address">
+        </div>
+        <!---Contact Info---->
+        <div class="menu-header">
+          <h3>Contact Info:</h3>
+        </div>
+        <div class="sub-section"><label for="phone">Phone Number*:</label>
+          <br>
+          <input type="text" id="phone">
+        </div>
+        <div class="sub-section last-sub-child"><label for="email">Email address*:</label>
+          <br>
+          <input type="text" id="email">
+        </div>
+        <div class="menu-header">
+          <h3>Resume</h3>
+        </div>
+        <div class="sub-section">
+          <label for="pp">Upload Your Resume:*</label>
+          <br>
+          <input class="image-upload" id="pp" type="file" accept="image/*"/>
+          <p class="sub-info">Please make sure that your resume is in pdf format.</p>
+
+        </div>
+        <div class="sub-section">
+          <label for="cover-letter">Cover Letter:</label>
+          <br>
+          <textarea class="profile" type="text" id="cover-letter" rows="5" cols="70"></textarea>
+        </div>
+
+      </form>
+
+      <div class="settings-footer">
+        <button id="save" type="submit"> Save</button>
+      </div>
+    </div>
+  </div>
+  <!----Right Side ends---->
+
+</main>
+
+<!--Footer-->
+<footer class="page-footer">
+  <div class="page-footer-content">
+    <small class="copyright">All Content Copyright 2022 - <strong>Maskeli Beşler</strong>. All Rights Reserved.
+    </small>
+    <small class="credits"> Site Designed by <strong>Maskeli Beşler</strong></small>
+  </div>
+</footer>
+<script src="../../resources/static/js/main.js"></script>
+
+</body>
+</html>
